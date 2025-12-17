@@ -1,9 +1,11 @@
+import Link from 'next/link';
 import React from 'react';
 
 interface Pattern {
     name: string;
     category: 'Creational' | 'Structural' | 'Behavioral';
     description: string;
+    link?: string;
     icon: string;
 }
 
@@ -82,6 +84,7 @@ const patterns: Pattern[] = [
     {
         name: 'Strategy',
         category: 'Behavioral',
+        link: '/strategy',
         description: 'Defines a family of algorithms, encapsulates each one, and makes them interchangeable.',
         icon: '♟️'
     },
@@ -147,29 +150,44 @@ export default function DesignPatterns() {
                                     key={pattern.name}
                                     className="group relative overflow-hidden rounded-lg sm:rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-3 sm:p-4 md:p-5 transition-all duration-300 hover:shadow-lg hover:scale-[1.01] cursor-pointer w-full max-w-full"
                                 >
-                                    <div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3 w-full">
-                                        <div className="text-xl sm:text-2xl md:text-3xl flex-shrink-0">{pattern.icon}</div>
-                                        <div className="flex-1 min-w-0 overflow-hidden">
-                                            <h4 className="text-sm sm:text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-1 break-words overflow-wrap-anywhere">
-                                                {pattern.name}
-                                            </h4>
-                                            <span className={`inline-block px-2 py-1 rounded-md text-xs font-medium ${categoryBadgeColors[category]}`}>
-                                                {category}
-                                            </span>
+                                    {pattern.link ? (
+                                        <Link href={pattern.link} className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3 w-full">
+                                            <div className="text-xl sm:text-2xl md:text-3xl flex-shrink-0">{pattern.icon}</div>
+                                            <div className="flex-1 min-w-0 overflow-hidden">
+                                                <h4 className="text-sm sm:text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-1 break-words overflow-wrap-anywhere">
+                                                    {pattern.name}
+                                                </h4>
+                                                <span className={`inline-block px-2 py-1 rounded-md text-xs font-medium ${categoryBadgeColors[category]}`}>
+                                                    {category}
+                                                </span>
+                                            </div>
+                                        </Link>
+                                    ) : (
+                                        <div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3 w-full">
+                                            <div className="text-xl sm:text-2xl md:text-3xl flex-shrink-0">{pattern.icon}</div>
+                                            <div className="flex-1 min-w-0 overflow-hidden">
+                                                <h4 className="text-sm sm:text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-1 break-words overflow-wrap-anywhere">
+                                                    {pattern.name}
+                                                </h4>
+                                                <span className={`inline-block px-2 py-1 rounded-md text-xs font-medium ${categoryBadgeColors[category]}`}>
+                                                    {category}
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
 
                                     <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed break-words overflow-wrap-anywhere">
                                         {pattern.description}
                                     </p>
 
                                     {/* Hover effect gradient overlay */}
-                                    <div className={`absolute inset-0 bg-gradient-to-br ${categoryColors[category]} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`} />
+                                    < div className={`absolute inset-0 bg-gradient-to-br ${categoryColors[category]} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`} />
                                 </div>
                             ))}
                     </div>
                 </div>
-            ))}
-        </div>
+            ))
+            }
+        </div >
     );
 }
