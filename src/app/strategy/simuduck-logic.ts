@@ -47,6 +47,8 @@ export abstract class Duck {
     id: string;
     x: number;
     y: number;
+    vx: number;
+    vy: number;
     type: string;
 
     constructor(flyBehavior: FlyBehavior, quackBehavior: QuackBehavior, type: string) {
@@ -56,6 +58,9 @@ export abstract class Duck {
         this.id = Math.random().toString(36).substr(2, 9);
         this.x = Math.random() * 80; // Start at random X (0-80%)
         this.y = Math.random() * 60; // Start at random Y (0-60%)
+        // Initial velocity for smooth movement
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
     }
 
     abstract display(): string;

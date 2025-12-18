@@ -42,23 +42,32 @@ export default function SimUDuckGame() {
 
     const updateGame = () => {
         ducksRef.current = ducksRef.current.map(duck => {
-            // Logic: If duck can fly, it moves faster and more randomly
             const flightStatus = duck.performFly();
+            const isFlying = flightStatus === "I'm flying!!";
 
-            if (flightStatus === "I'm flying!!") {
-                // Flying movement
-                duck.x += (Math.random() - 0.5) * 1; // Jitter X
-                duck.y += (Math.random() - 0.5) * 1; // Jitter Y
+            // Movement speed based on status
+            const speedMultiplier = isFlying ? 1.0 : 0.3;
 
-                // Wrap around screen
-                if (duck.x > 100) duck.x = 0;
-                if (duck.x < 0) duck.x = 100;
-                if (duck.y > 100) duck.y = 0;
-                if (duck.y < 0) duck.y = 100;
-            } else {
-                // Floating movement (slower)
-                duck.x += (Math.random() - 0.5) * 0.2;
+            // Update position
+            duck.x += duck.vx * speedMultiplier;
+            duck.y += duck.vy * speedMultiplier;
+
+            // Add a tiny bit of random jitter to flying ducks to make it feel less linear
+            if (isFlying) {
+                duck.x += (Math.random() - 0.5) * 0.1;
+                duck.y += (Math.random() - 0.5) * 0.1;
             }
+
+            // Boundary logic: Bounce off the edges
+            if (duck.x >= 100 || duck.x <= 0) {
+                duck.vx *= -1; // Reverse horizontal direction
+                duck.x = Math.max(0, Math.min(100, duck.x)); // Clamp
+            }
+            if (duck.y >= 100 || duck.y <= 0) {
+                duck.vy *= -1; // Reverse vertical direction
+                duck.y = Math.max(0, Math.min(100, duck.y)); // Clamp
+            }
+
             return duck;
         });
 
@@ -112,9 +121,9 @@ export default function SimUDuckGame() {
 
     return (
         <div className="flex flex-col gap-4 p-4 border rounded-lg shadow-xl bg-slate-50 min-h-[600px]">
-            <div className="flex justify-between items-center text-xl font-bold p-4 bg-white rounded shadow">
+            <div className="flex justify-between items-center text-xl font-bold p-4 bg-slate-400 rounded shadow">
                 <div>Score: {score}</div>
-                <div className="text-sm font-normal text-gray-500">Click ducks to verify behavior!</div>
+                <div className="text-sm font-normal">Click ducks to verify behavior!</div>
             </div>
 
             <div className="relative grow bg-blue-100 rounded-lg overflow-hidden border-2 border-blue-200" style={{ height: '400px' }}>

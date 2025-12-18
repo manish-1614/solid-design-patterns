@@ -11,7 +11,7 @@ const StrategyPattern = () => {
                     This is a TypeScript/React recreation of the famous SimUDuck app from
                     <em> Head First Design Patterns</em>.
                 </p>
-                <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500 mb-4 text-sm">
+                <div className="bg-slate-500 p-4 rounded-lg border-l-4 border-yellow-500 mb-4 text-sm">
                     <strong>Strategy Pattern Breakdown:</strong>
                     <ul className="list-disc pl-5 mt-2 space-y-1">
                         <li><strong>Context</strong>: The <code>Duck</code> abstract class.</li>
