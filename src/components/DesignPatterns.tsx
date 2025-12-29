@@ -137,7 +137,7 @@ export default function DesignPatterns() {
             {categories.map((category) => (
                 <div key={category} className="mb-8 sm:mb-10 md:mb-12 w-full">
                     <div className="mb-3 sm:mb-4 md:mb-6">
-                        <h3 className={`text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r ${categoryColors[category]} bg-clip-text text-transparent inline-block`}>
+                        <h3 className={`text-lg sm:text-xl md:text-2xl font-bold bg-linear-to-r ${categoryColors[category]} bg-clip-text text-transparent inline-block`}>
                             {category} Patterns
                         </h3>
                     </div>
@@ -181,7 +181,7 @@ export default function DesignPatterns() {
                                     </p>
 
                                     {/* Hover effect gradient overlay */}
-                                    < div className={`absolute inset-0 bg-gradient-to-br ${categoryColors[category]} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`} />
+                                    < div className={`absolute inset-0 bg-linear-to-br ${categoryColors[category]} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`} />
                                 </div>
                             ))}
                     </div>

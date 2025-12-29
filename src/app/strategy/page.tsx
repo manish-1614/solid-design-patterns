@@ -21,7 +21,7 @@ const StrategyPattern = () => {
                         </li>
                     </ul>
                 </div>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-400 mb-4">
                     <strong>How to play:</strong> Click on the ducks! <br />
                     🦆 Real Ducks give +10 points.<br />
                     🐤 Rubber Ducks give +2 points.<br />

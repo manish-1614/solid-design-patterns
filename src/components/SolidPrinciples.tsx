@@ -59,14 +59,14 @@ export default function SolidPrinciples() {
                         className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-3 sm:p-4 md:p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.01] cursor-pointer w-full max-w-full"
                     >
                         <div className="flex items-start gap-2 sm:gap-3 md:gap-4 w-full">
-                            <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br ${principle.color} flex items-center justify-center shadow-lg`}>
+                            <div className={`shrink-0 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-lg sm:rounded-xl bg-linear-to-br ${principle.color} flex items-center justify-center shadow-lg`}>
                                 <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                                     {principle.letter}
                                 </span>
                             </div>
 
                             <div className="flex-1 min-w-0 overflow-hidden">
-                                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50 mb-1 sm:mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-zinc-900 group-hover:to-zinc-600 dark:group-hover:from-zinc-50 dark:group-hover:to-zinc-400 transition-all break-words overflow-wrap-anywhere">
+                                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50 mb-1 sm:mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-zinc-900 group-hover:to-zinc-600 dark:group-hover:from-zinc-50 dark:group-hover:to-zinc-400 transition-all break-words overflow-wrap-anywhere">
                                     {principle.name}
                                 </h3>
                                 <p className="text-xs sm:text-sm md:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed break-words overflow-wrap-anywhere">
@@ -75,7 +75,7 @@ export default function SolidPrinciples() {
                             </div>
                         </div>
                         {/* Hover effect gradient overlay */}
-                        <div className={`absolute inset-0 bg-gradient-to-br ${principle.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`} />
+                        <div className={`absolute inset-0 bg-linear-to-br ${principle.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`} />
                     </div>
                 ))}
             </div>
