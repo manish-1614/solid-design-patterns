@@ -66,10 +66,10 @@ export default function SolidPrinciples() {
                             </div>
 
                             <div className="flex-1 min-w-0 overflow-hidden">
-                                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50 mb-1 sm:mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-zinc-900 group-hover:to-zinc-600 dark:group-hover:from-zinc-50 dark:group-hover:to-zinc-400 transition-all break-words overflow-wrap-anywhere">
+                                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-50 mb-1 sm:mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-zinc-900 group-hover:to-zinc-600 dark:group-hover:from-zinc-50 dark:group-hover:to-zinc-400 transition-all wrap-break-word overflow-wrap-anywhere">
                                     {principle.name}
                                 </h3>
-                                <p className="text-xs sm:text-sm md:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed break-words overflow-wrap-anywhere">
+                                <p className="text-xs sm:text-sm md:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed wrap-break-word overflow-wrap-anywhere">
                                     {principle.description}
                                 </p>
                             </div>

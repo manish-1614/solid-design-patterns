@@ -20,7 +20,7 @@ export default function InterviewQuestionsClient({ questions }: InterviewQuestio
         : questions;
 
     return (
-        <div className="w-full max-w-full overflow-x-hidden">
+        <div className="w-full max-w-full">
             {/* Header row */}
             <div className="mb-4 sm:mb-6 md:mb-8">
                 <div className="flex items-center justify-between mb-2 sm:mb-3">
@@ -63,7 +63,7 @@ export default function InterviewQuestionsClient({ questions }: InterviewQuestio
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         placeholder="Search questions..."
-                        className="w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent transition-all duration-200 text-sm sm:text-base"
+                        className="w-full pl-10 mx-2 pr-4 py-2.5 sm:py-3 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent transition-all duration-200 text-sm sm:text-base"
                     />
                     {search && (
                         <button

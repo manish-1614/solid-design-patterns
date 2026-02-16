@@ -152,9 +152,9 @@ export default function DesignPatterns() {
                                 >
                                     {pattern.link ? (
                                         <Link href={pattern.link} className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3 w-full">
-                                            <div className="text-xl sm:text-2xl md:text-3xl flex-shrink-0">{pattern.icon}</div>
+                                            <div className="text-xl sm:text-2xl md:text-3xl shrink-0">{pattern.icon}</div>
                                             <div className="flex-1 min-w-0 overflow-hidden">
-                                                <h4 className="text-sm sm:text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-1 break-words overflow-wrap-anywhere">
+                                                <h4 className="text-sm sm:text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-1 wrap-break-word overflow-wrap-anywhere">
                                                     {pattern.name}
                                                 </h4>
                                                 <span className={`inline-block px-2 py-1 rounded-md text-xs font-medium ${categoryBadgeColors[category]}`}>
@@ -164,9 +164,9 @@ export default function DesignPatterns() {
                                         </Link>
                                     ) : (
                                         <div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3 w-full">
-                                            <div className="text-xl sm:text-2xl md:text-3xl flex-shrink-0">{pattern.icon}</div>
+                                            <div className="text-xl sm:text-2xl md:text-3xl shrink-0">{pattern.icon}</div>
                                             <div className="flex-1 min-w-0 overflow-hidden">
-                                                <h4 className="text-sm sm:text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-1 break-words overflow-wrap-anywhere">
+                                                <h4 className="text-sm sm:text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-1 wrap-break-word overflow-wrap-anywhere">
                                                     {pattern.name}
                                                 </h4>
                                                 <span className={`inline-block px-2 py-1 rounded-md text-xs font-medium ${categoryBadgeColors[category]}`}>
@@ -176,7 +176,7 @@ export default function DesignPatterns() {
                                         </div>
                                     )}
 
-                                    <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed break-words overflow-wrap-anywhere">
+                                    <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed wrap-break-word overflow-wrap-anywhere">
                                         {pattern.description}
                                     </p>
 
