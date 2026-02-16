@@ -1,4 +1,3 @@
-import React from 'react';
 import SimUDuckGame from './SimUDuckGame';
 
 const StrategyPattern = () => {
