@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "How does HASHMAP work in Java? Explain its underlying implementation.",
+      "answer": {
+        "goldenKeywords": "HashMap is an Array of Linked Lists.",
+        "description": "The name hashmap is because it uses a hash function to hash the key and store the value in the target bucket. The hash function is a function that takes a key and returns a hash code. The hash code is used to index the array. For the same key, the hash code is the same.",
+        "codeUrl": "src/data/interviews/code/HashMapImpl.java"
+      }
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the difference between HashMap and HashTable in Java?",
+      "answer": {
+        "goldenKeywords": "HashMap is not thread-safe while HashTable is thread-safe.",
+        "description": "HashMap is not thread-safe while HashTable is thread-safe. HashMap allows one null key and multiple null values while HashTable does not allow any null key or value.",
+        "codeUrl": null
+      }
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the difference between HashMap and LinkedHashMap in Java?",
+      "answer": {
+        "goldenKeywords": "HashMap is not ordered while LinkedHashMap is ordered.",
+        "description": "HashMap is not ordered while LinkedHashMap is ordered. HashMap is faster than LinkedHashMap. HashMap allows one null key and multiple null values while LinkedHashMap does not allow any null key or value.",
+        "codeUrl": null
+      }
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the difference between HashMap and TreeMap in Java?",
+      "answer": {
+        "goldenKeywords": "HashMap is not ordered while TreeMap is ordered.",
+        "description": "HashMap is not ordered while TreeMap is ordered. HashMap is faster than TreeMap. HashMap allows one null key and multiple null values while TreeMap does not allow any null key or value.",
+        "codeUrl": null
+      }
+    }
+  ]
+}

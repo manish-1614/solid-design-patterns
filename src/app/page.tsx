@@ -1,5 +1,6 @@
 import SolidPrinciples from "@/components/SolidPrinciples";
 import DesignPatterns from "@/components/DesignPatterns";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,11 +19,25 @@ export default function Home() {
         {/* SOLID Principles Section */}
         <section className="mb-12 sm:mb-16 md:mb-20 w-full">
           <SolidPrinciples />
+          <br />
+          
         </section>
 
         {/* Design Patterns Section */}
         <section className="mb-12 sm:mb-16 md:mb-20 w-full">
           <DesignPatterns />
+        </section>
+
+        {/* Interview Questions Link */}
+        <section className="mb-12 sm:mb-16 md:mb-20 w-full">
+          <div className="text-center">
+            <Link 
+              href="/interviews"
+              className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors duration-200 text-base sm:text-lg md:text-xl"
+            >
+              Interview Questions →
+            </Link>
+          </div>
         </section>
       </div>
     </div>
